@@ -21,7 +21,7 @@ ENV LANGUAGE en_US:en
 # 7660 — POP3 proxy to pop.postman.i2p
 # 8998 — Proxy to mtn.i2p-projekt.i2p
 ##
-EXPOSE 2827 7650 7654 7655 7656 7657 7658 7659 7660 7661 7662 4444 6668 8998
+EXPOSE 2827 7650 7654 7655 7656 7657 7658 7659 7660 7661 7662 4444 6668 8998 20000-30000
 
 RUN apt-get -y update && \
     apt-get -y install \
