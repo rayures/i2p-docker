@@ -57,7 +57,7 @@ RUN sed -i 's/.*\(en_US\.UTF-8\)/\1/' /etc/locale.gen && \
 RUN sed -i 's/127\.0\.0\.1/0.0.0.0/g' ${I2P_DIR}/i2ptunnel.config && \
     sed -i 's/::1,127\.0\.0\.1/0.0.0.0/g' ${I2P_DIR}/clients.config && \
     printf "i2cp.tcp.bindAllInterfaces=true\n" >> ${I2P_DIR}/router.config && \
-    printf "i2np.ipv4.firewalled=true\ni2np.ntcp.ipv6=false\n" >> ${I2P_DIR}/router.config && \
+    printf "i2np.ipv4.firewalled=false\ni2np.ntcp.ipv6=false\n" >> ${I2P_DIR}/router.config && \
     printf "i2np.udp.ipv6=false\ni2np.upnp.enable=false\n" >> ${I2P_DIR}/router.config
  
 VOLUME /var/lib/i2p
