@@ -27,6 +27,8 @@ RUN apt-get -y update && \
     apt-get -y install \
 	  apt-transport-https \
 	  gnupg \
+	  sudo \
+	  wget \
 	&& \
     apt-get clean
 RUN echo "deb https://deb.i2p2.de/ stretch main" > /etc/apt/sources.list.d/i2p.list 
