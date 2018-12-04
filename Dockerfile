@@ -27,7 +27,9 @@ RUN apt-get -y update && \
     apt-get -y install \
 	  apt-transport-https \
 	  gnupg \
+	  #sudo for apkt-key add
 	  sudo \
+	  #wget for repo key
 	  wget \
 	&& \
     apt-get clean
