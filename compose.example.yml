@@ -1,0 +1,17 @@
+ i2p:
+  image: i2p:latest
+  container_name: i2p
+  restart: unless-stopped
+  ports:
+   - 2827:2827
+   - 4444:4444 #http proxy
+   - 4445:4445 #https proxy
+   - 6668:6668
+   - 7650:7650
+   - 7654-7662:7654-7662
+   - 8998:8998
+   - $routerport:$routerport
+   - $routerport:$routerport/udp
+  volumes:
+   - $folder/i2p:/var/lib/i2p:Z
+   - /etc/localtime:/etc/localtime:ro

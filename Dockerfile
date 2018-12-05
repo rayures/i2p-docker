@@ -7,7 +7,7 @@ ENV LANGUAGE en_US:en
 
 RUN apt-get -y update && \
     apt-get -y install \
-	  gnupg \
+      	  gnupg \
           i2p \
           locales \
           procps &&\
