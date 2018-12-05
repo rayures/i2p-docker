@@ -13,15 +13,20 @@ ENV LANGUAGE en_US:en
 # Main ports:
 # 2827 - BOB port
 # 4444 — HTTP proxy
+# 4445 - HTTPS proxy
 # 6668 — Proxy to Irc2P
+# 7650 - ??
 # 7656 - SAM port
 # 7657 — router console
 # 7658 — self-hosted eepsite
 # 7659 — SMTP proxy to smtp.postman.i2p
 # 7660 — POP3 proxy to pop.postman.i2p
+# 7661 - ??
+# 7662 - ??
 # 8998 — Proxy to mtn.i2p-projekt.i2p
+# 9100-30000 - Randomly set transfer port as stated on i2p website. //need to dubblecheck 
 ##
-EXPOSE 2827 7650 7654 7655 7656 7657 7658 7659 7660 7661 7662 4444 6668 8998 20000-30000
+EXPOSE 2827 4444 4445 6668 7650 7654 7655 7656 7657 7658 7659 7660 7661 7662 8998 9100-30000
 
 RUN apt-get -y update && \
     apt-get -y install \
