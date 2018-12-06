@@ -55,6 +55,9 @@ RUN sed -i 's/127\.0\.0\.1/0.0.0.0/g' ${I2P_DIR}/i2ptunnel.config && \
 
 EXPOSE 2827 4444 4445 6668 7650 7654 7655 7656 7657 7658 7659 7660 7661 7662 8998 9111-30777
  
+HEALTHCHECK --interval=60s --timeout=15s --start-period=120s \
+CMD curl -L 'https://api.ipify.org'
+
 VOLUME /var/lib/i2p
 USER i2psvc
 ENTRYPOINT ["/usr/bin/i2prouter"]
