@@ -1,9 +1,14 @@
-# I2P in Docker
+# Changes:
+20190501: available on docker hub (private repo for now).
 
+
+# I2P in Docker
 This is the Java I2P router in Docker.
 
+always up to date with docker auto build based on new i2p releases trigger.
+
 ## Usage
-build it yourself, not available on hub.docker. 
+for now: build it yourself, not publicly available on hub.docker. 
 
 i.e: 
 `git clone https://github.com/rayures/i2p-docker.git /home/i2p/source`
