@@ -1,3 +1,4 @@
+#dev
 FROM debian:buster
  
 ENV I2P_DIR /usr/share/i2p
@@ -10,6 +11,7 @@ RUN apt-get -y update && \
 	  gnupg \
           locales \
           procps \
+	  nano \
 	  wget &&\
     apt-get clean
 
