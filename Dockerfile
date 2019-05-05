@@ -19,7 +19,7 @@ RUN echo "deb https://deb.i2p2.de/ buster main" > /etc/apt/sources.list.d/i2p.li
     echo "deb-src https://deb.i2p2.de/ buster main" > /etc/apt/sources.list.d/i2p.list && \
     wget https://geti2p.net/_static/i2p-debian-repo.key.asc && \
     apt-key add i2p-debian-repo.key.asc && \
-    rm i2p-debian-repo.key.asc
+    rm i2p-debian-repo.key.asc && \
     rm /etc/apt/sources.list
     
 RUN apt-get -y update && \
