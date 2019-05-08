@@ -1,5 +1,5 @@
 #testing
-FROM debian:buster
+FROM FROM meeh/java8server:latest
 
 ENV GIT_BRANCH="master"
 ENV I2P_PREFIX="/opt/i2p"
