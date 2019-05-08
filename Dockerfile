@@ -1,5 +1,5 @@
 #testing
-FROM FROM meeh/java8server:latest
+FROM meeh/java8server:latest
 
 ENV GIT_BRANCH="master"
 ENV I2P_PREFIX="/opt/i2p"
