@@ -1,0 +1,7 @@
+Package: i2p
+Pin: deb.i2p2.de
+Pin-Priority: 999
+
+Package: *
+Pin: deb.debian.org
+Pin-Priority: 2
