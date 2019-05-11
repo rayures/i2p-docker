@@ -15,8 +15,8 @@ RUN apt-get -y update && \
 	  wget &&\
     apt-get clean
 
-RUN	echo "deb https://deb.i2p2.de/ buster main" > /etc/apt/sources.list && \
-	echo "deb-src https://deb.i2p2.de/ buster main" > /etc/apt/sources.list && \
+RUN	echo "deb https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
+	echo "deb-src https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
 #echo "deb https://deb.i2p2.de/ buster main" > /etc/apt/sources.list.d/i2p.list && \
 #echo "deb-src https://deb.i2p2.de/ buster main" > /etc/apt/sources.list.d/i2p.list && \
 	wget https://geti2p.net/_static/i2p-debian-repo.key.asc && \
