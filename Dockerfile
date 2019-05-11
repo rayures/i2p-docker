@@ -14,6 +14,8 @@ RUN apt-get -y update && \
 	  nano \
 	  wget &&\
     apt-get clean
+    
+ADD preferences /etc/apt/preferences
 
 RUN	echo "deb https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
 	echo "deb-src https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
