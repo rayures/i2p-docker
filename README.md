@@ -1,6 +1,8 @@
 # Changes:
 20190512: fixed i2p2 repo source. 
+
 20190501: made available on docker hub
+
 20190501: changed to i2p-repo for source
 
 
