@@ -1,19 +1,17 @@
 # Changes:
-20190512: fixed i2p2 repo source. 
-
+20190512: fixed i2p2 repo source
 20190501: made available on docker hub
-
 20190501: changed to i2p-repo for source
-
 
 # I2P in Docker
 This is the Java I2P router in Docker.
 
-always up to date with docker auto build based on new i2p releases trigger :-)
+# Updates
+The image on docker hub wil always be up to date, because automaticly a docker 'auto build' wil be triggerd when a new i2p release is made available.
 
 ## Usage
 run it:
-`docker run -v ~/.i2p:/var/lib/i2p -p 127.0.0.1:4444:4444 -p 127.0.0.1:6668:6668 -p 127.0.0.1:7657:7657 geti2p/i2p`
+`docker run -v ~/.i2p:/var/lib/i2p -p 127.0.0.1:4444:4444 -p 127.0.0.1:6668:6668 -p 127.0.0.1:7657:7657 rayures/i2p`
 
 or use the `compose.example.yml`
 
