@@ -11,11 +11,11 @@ RUN apt-get -y update && \
 	  gnupg \
           locales \
           procps \
-	  nano \
+#	  nano \
 	  wget &&\
     apt-get clean
     
-ADD preferences /etc/apt/preferences
+# ADD preferences /etc/apt/preferences
 
 RUN	echo "deb https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
 	echo "deb-src https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
