@@ -1,5 +1,5 @@
  i2p:
-  image: i2p:latest
+  image: rayures/i2p:latest
   container_name: i2p
   restart: unless-stopped
   ports:
