@@ -1,4 +1,6 @@
 # Changes:
+20191029: fixed auto build trigger after i2p update
+
 20190512: fixed i2p2 repo source
 
 20190501: made available on docker hub
@@ -9,7 +11,7 @@
 This is the Java I2P router in Docker.
 
 # Updates
-The image on docker hub wil always be up to date, because automaticly a docker 'auto build' wil be triggerd when a new i2p release is made available.
+The image on docker hub will always be up to date, because automatically a docker 'auto build' will be triggered when a new i2p release is made available.
 
 ## Usage
 run it:
