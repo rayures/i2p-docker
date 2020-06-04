@@ -6,8 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 
-RUN apt update && \
-    apt install \
+RUN apt-get -y update && \
+    apt-get -y install \
 	  gnupg \
           locales \
           procps \
@@ -26,16 +26,16 @@ RUN	echo "deb https://deb.i2p2.de/ unstable main" | tee -a /etc/apt/sources.list
 	rm i2p-debian-repo.key.asc
 #    rm /etc/apt/sources.list	
     
-RUN apt update && \
+RUN apt-get -y update && \
 	apt list i2p && \
 	apt search i2p && \
-    apt install \
+    apt-get -y install \
       	  i2p-keyring \
           i2p &&\
     apt clean
     
 RUN echo "RUN_AS_USER=i2psvc" >> /etc/default/i2p && \
-    apt-get clean && \
+    apt clean && \
     rm -rf /var/lib/i2p && \
 	mkdir -p /var/lib/i2p/i2p-config && \
 	chown -R i2psvc:i2psvc /var/lib/i2p && \
