@@ -26,11 +26,11 @@ RUN	echo "deb https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list &
 	rm i2p-debian-repo.key.asc
 #    rm /etc/apt/sources.list	
     
-RUN apt-get -y update && \
-    apt-get -y install \
+RUN apt update && \
+    apt install \
       	  i2p-keyring \
           i2p &&\
-    apt-get clean
+    apt clean
     
 RUN echo "RUN_AS_USER=i2psvc" >> /etc/default/i2p && \
     apt-get clean && \
