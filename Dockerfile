@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:unstable
  
 ENV I2P_DIR /usr/share/i2p
 ENV DEBIAN_FRONTEND noninteractive
@@ -11,10 +11,10 @@ RUN apt-get -y update && \
           locales \
           procps \
 	  wget &&\
-    apt-get clean
+    apt clean
     
-RUN	echo "deb https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
-	echo "deb-src https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list && \
+RUN	echo "deb https://deb.i2p2.de/ unstable main" | tee -a /etc/apt/sources.list && \
+	echo "deb-src https://deb.i2p2.de/ unstable main" | tee -a /etc/apt/sources.list && \
     	wget https://geti2p.net/_static/i2p-debian-repo.key.asc && \
     	apt-key add i2p-debian-repo.key.asc && \
     	rm i2p-debian-repo.key.asc
@@ -23,10 +23,10 @@ RUN apt-get -y update && \
     apt-get -y install \
       	  i2p-keyring \
           i2p &&\
-    apt-get clean
+    apt clean
     
 RUN echo "RUN_AS_USER=i2psvc" >> /etc/default/i2p && \
-    apt-get clean && \
+    apt clean && \
     rm -rf /var/lib/i2p && \
 	mkdir -p /var/lib/i2p/i2p-config && \
 	chown -R i2psvc:i2psvc /var/lib/i2p && \
