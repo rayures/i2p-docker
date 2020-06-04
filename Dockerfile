@@ -6,14 +6,14 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 
-RUN apt-get -y update && \
-    apt-get -y install \
+RUN apt update && \
+    apt install \
 	  gnupg \
           locales \
           procps \
 #	  nano \
 	  wget &&\
-    apt-get clean
+    apt clean
     
 # ADD preferences /etc/apt/preferences
 
@@ -27,6 +27,8 @@ RUN	echo "deb https://deb.i2p2.de/ buster main" | tee -a /etc/apt/sources.list &
 #    rm /etc/apt/sources.list	
     
 RUN apt update && \
+	apt list i2p && \
+	apt search i2p && \
     apt install \
       	  i2p-keyring \
           i2p &&\
