@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag i2p:test1
+      run: docker build . --file Dockerfile --tag test1
 
     - name: Login to DockerHub
       run: echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_USER_NAME }} --password-stdin
