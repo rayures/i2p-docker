@@ -27,4 +27,4 @@ jobs:
       run: echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_USER_NAME }} --password-stdin
 
     - name: Push the latest Docker image
-      run: docker push test1
+      run: docker push i2p
