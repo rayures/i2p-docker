@@ -13,18 +13,15 @@ on:
       - webhook
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag latest
-
-    - name: Login to DockerHub
-      run: echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_USER_NAME }} --password-stdin
-
-    - name: Push the latest Docker image
-      run: docker push latest
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v2
+      - name: Build and push docker
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USER_NAME }}
+          password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+          repository: i2p
+          tags: latest
