@@ -1,4 +1,6 @@
 # Changes:
+20210720: changed autobuild to github actions [once a month automatically]. (todo: autobuild on new i2p release)
+
 20191029: fixed auto build trigger after i2p update
 
 20190512: fixed i2p2 repo source
