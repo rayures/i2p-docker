@@ -21,10 +21,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag test1
+      run: docker build . --file Dockerfile --tag latest
 
     - name: Login to DockerHub
       run: echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_USER_NAME }} --password-stdin
 
     - name: Push the latest Docker image
-      run: docker push i2p
+      run: docker push latest
