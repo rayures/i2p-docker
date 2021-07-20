@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types:
-      - [build, webhook]
+      - [build, release]
 
 jobs:
   build:
